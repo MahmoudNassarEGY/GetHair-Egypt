@@ -1,0 +1,36 @@
+﻿@model IEnumerable<GetHair_Egypt.Models.Clinic>
+
+@{
+    ViewBag.Title = "HomePage";
+}
+
+<h2>Clinics</h2>
+<h2>@Session["ID"]</h2>
+
+<div class="row">
+
+    @foreach (var item in Model)
+    {
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <img src="@Url.Content(item.CImage1)" alt="..." width="242" height="200">
+                <div class="caption">
+                    <h3>@item.CName</h3>
+                    <p>...</p>
+                    <p><a> @Html.ActionLink("Apply", "Create","Applications", new { id = item.CID }, new { @class = "btn btn-primary" }) </a> </p>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+@* @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+
+    <script type="text/javascript">
+        $('.btn-primary').click(function () {
+            document.location = '@Url.Action("Create","Applications")';
+        });
+
+    </script> *@
+}

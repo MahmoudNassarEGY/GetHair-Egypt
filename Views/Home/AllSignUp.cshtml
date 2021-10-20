@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "AllSignUp";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+<h2>AllSignUp</h2>
+
+<button type="button" id="btn1" class="btn btn-secondary btn-lg btn-block">Clinic</button>
+<button type="button" id="btn2" class="btn btn-secondary btn-lg btn-block">User</button>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <script type="text/javascript">
+    $('#btn1').click(function () {
+        document.location = '@Url.Action("Create","Clinics")';
+    });
+
+     $('#btn2').click(function () {
+         document.location = '@Url.Action("Create","Clients")';
+    });
+    </script>
+}

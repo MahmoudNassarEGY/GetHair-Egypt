@@ -1,0 +1,11 @@
+﻿CREATE TABLE [dbo].[Table]
+(
+	[CName] NVARCHAR(50) NOT NULL PRIMARY KEY, 
+    [Email] VARCHAR(50) NULL, 
+    [CUrl] VARCHAR(150) NULL, 
+    [Password] NCHAR(10) NOT NULL, 
+    [CImage1] NVARCHAR(150) NOT NULL, 
+    [CImage2] NVARCHAR(150) NULL, 
+    [CImage3] NVARCHAR(150) NULL, 
+    [CImage4] NVARCHAR(150) NULL
+)

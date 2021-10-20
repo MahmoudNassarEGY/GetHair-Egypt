@@ -1,0 +1,43 @@
+﻿@model GetHair_Egypt.Models.Application
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Application</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AppDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AppDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Client.FName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Client.FName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Clinic.CName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Clinic.CName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.AppID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
